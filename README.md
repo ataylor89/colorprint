@@ -75,13 +75,13 @@ The program colorprint.py can be used in the following way.
     % cd ~/Github/colorprint
     % ls 
     ansi.py		colorprint.py	README.md	settings.py
-    % colorprint.py "Hello world (black on orange)"
+    % python colorprint.py "Hello world (black on orange)"
     Hello world (black on orange)
-    % colorprint.py -fg cyan -bg none "Hello world (cyan)"
+    % python colorprint.py -fg cyan -bg none "Hello world (cyan)"
     Hello world (cyan)
-    % colorprint.py -fg cyan -bg black "Hello world (cyan on black")
+    % python colorprint.py -fg cyan -bg black "Hello world (cyan on black")
     Hello world (cyan on black)
-    % colorprint.py -fg green -bg black "Hello world (green on black")
+    % python colorprint.py -fg green -bg black "Hello world (green on black")
     Hello world (green on black)
 
 The file defaults.py can be edited to change the default colors. (At the time of writing, the default colors are black on orange.)
