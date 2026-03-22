@@ -2,7 +2,7 @@
 
 ## Escape sequences
 
-Escape sequence is a term that I have encountered a lot. But for a long time, I didn't know what it meant.
+Escape sequence is a term that I have encountered a lot. But for a long time, I didn't know what it means.
 
 I suppose I had a rough idea. But I didn't have a definition at hand.
 
