@@ -171,7 +171,7 @@ I think it helps to write down some of the vocabulary that we used in this docum
 | Shell | A command-line interpreter (like Bash or Zsh) that allows a user to interact with the operating system; video terminals actually interacted with a shell program that ran on the host computer, just like terminal emulators interact with a shell program |
 | Terminal emulator | A software program that emulates the original video terminals |
 | Unicode | A character encoding standard created in the early 1990s, that has over 1 million code points, and supports many world languages |
-| Video terminal | A device consisting of a keyboard and a screen that allows input and output with a computer, popular in the 1960s, 1970s, and 1980s |
+| Video terminal | A device consisting of a keyboard and a screen that allows input and output with a computer, such as a mainframe computer, popular in the 1960s, 1970s, and 1980s |
 
 I enjoyed learning about video terminals while writing this document. It helps to explain what a terminal emulator is.
 
