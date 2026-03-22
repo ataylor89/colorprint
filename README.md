@@ -87,3 +87,70 @@ The program colorprint.py can be used in the following way.
 The file defaults.py can be edited to change the default colors. (At the time of writing, the default colors are black on orange.)
 
 I might update ansi.py to include more color codes, over time. If I find more, then I'll probably update it, to include them.
+
+## What does #! mean?
+
+When we type the command `python colorprint.py "Hello world"` in Terminal, we are using the Python interpreter to execute the program.
+
+What if we want to use the shell (Bash or Zsh) to execute the program? Is there a way to do this?
+
+It turns out, there is.
+
+All we have to do is add a shell directive at the top of the file.
+
+The shell directive specifies which interpreter to use to interpret the script.
+
+The shell directive `#!/usr/bin/python3` instructs the shell to use the python3 interpeter to interpret the script.
+
+We can be a little more fancy. We can use the shell directive `#!/usr/bin/env python3` to locate the first occurrence of the python3 interpreter in the user's PATH variable, and to use this program as the interpeter.
+
+Why would I use `#!/usr/bin/env python3` instead of the more direct `#!/usr/bin/python3`?
+
+I actually have a reason for doing so.
+
+The utility `/usr/bin/env` comes pre-installed with MacOS, and it always has the same path, that is, `/usr/bin/env`.
+
+The python3 interpreter might not come pre-installed with MacOS. Sometimes, it can be found in the folder `/usr/bin`. But it actually depends on how you install it. If you install it using a package manager, then it might end up in a different location.
+
+Thinking about it mathematically, we can say there is a 100% chance, or a near 100% chance, that the `env` utility will be found in `/usr/bin`.
+
+But the chance that `python3` will be found in `/usr/bin` is lower than 100%. It actually depends on how you install it.
+
+The shell directive `#!/usr/bin/env python3` gives us a stronger guarantee that the correct Python interpreter will be located.
+
+If it's not installed on the system, then it won't be found.
+
+But if it is installed on the system, then we have a higher chance of finding it, if we use the `#!/usr/bin/env python3` shell directive.
+
+## How do I run colorprint.py using the shell?
+
+We can run the program colorprint.py, directly, using the shell, by setting it executable, and then using the `./` syntax for running a script.
+
+    % cd ~/Github/colorprint
+    % chmod +x colorprint.py
+    % ./colorprint.py "Hello world"
+    Hello world
+
+To make things even easier, we can create a symbolic link in a folder like ~/bin, and add this folder to the PATH variable.
+
+    % mkdir ~/bin
+    % cd ~/bin
+    % ln -s ~/Github/colorprint/colorprint.py colorprint.py
+
+The command (above) created the symbolic link. Now we have to add the following line to `~/.zprofile` to include `~/bin` in the PATH variable.
+
+    % vi ~/.zprofile
+    export PATH="/Users/<myusername>/bin:$PATH"
+
+The export statement (above) adds the `~/bin` folder to the PATH variable, by prepending it to the PATH variable.
+
+After making these changes, we can execute `~/.zprofile` to put the changes into effect, or cause `~/.zprofile` to run by opening a new tab in Terminal.
+
+Finally, we can run `colorprint.py` without the `./` syntax.
+
+    % colorprint.py "Hello world"
+    Hello world
+
+This way, we can run colorprint.py from any directory when we are using Terminal.
+
+Just like we can use `echo` and `cd` and `ls` from any directory, we can also use `colorprint.py` from any directory, because it's in our PATH variable.
