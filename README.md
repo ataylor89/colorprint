@@ -154,3 +154,25 @@ Finally, we can run `colorprint.py` without the `./` syntax.
 This way, we can run colorprint.py from any directory when we are using Terminal.
 
 Just like we can use `echo` and `cd` and `ls` from any directory, we can also use `colorprint.py` from any directory, because it's in our PATH variable.
+
+## Vocab
+
+I think it helps to write down some of the vocabulary that we used in this document.
+
+| Word/Phrase | Definition |
+| ----------- | ---------- |
+| ANSI | The organization that created ASCII; also, an 8-bit character encoding that extends the 7-bit ASCII character set |
+| ASCII | A 7-bit character encoding created in 1963 |
+| Character decoding | A system for converting code points into characters, and numeric data into text |
+| Character encoding | A system for converting characters into code points, and text into numeric data |
+| Escape sequence | A sequence of characters, that starts with a backslash, that signifies a special character or a command |
+| Hashbang (#!) | A sequence of characters (#!) that introduces a shell directive, and is placed at the top of a file |
+| PATH variable | An environment variable that consists of a list of directories, and is used for locating programs |
+| Shell | A command-line interpreter (like Bash or Zsh) that allows a user to interact with the operating system; video terminals actually interacted with a shell program that ran on the host computer, just like terminal emulators interact with a shell program |
+| Terminal emulator | A software program that emulates the original video terminals |
+| Unicode | A character encoding created in the early 1990s, that has over 1 million code points, and supports many world languages |
+| Video terminal | A device consisting of a keyboard and a screen that allows input and output with a computer, popular in the 1960s, 1970s, and 1980s |
+
+I really enjoyed learning about video terminals while writing this document. It really helps to explain what a terminal emulator is.
+
+I also really enjoyed learning about escape sequences, and the ANSI color codes in particular.
