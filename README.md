@@ -102,7 +102,7 @@ The shell directive specifies which interpreter to use to interpret the script.
 
 The shell directive `#!/usr/bin/python3` instructs the shell to use the python3 interpeter to interpret the script.
 
-We can be a little more fancy. We can use the shell directive `#!/usr/bin/env python3` to locate the first occurrence of the python3 interpreter in the user's PATH variable, and to use this program as the interpeter.
+We can be a little more fancy. We can use the shell directive `#!/usr/bin/env python3` to locate the first occurrence of the python3 interpreter in the directories listed in the user's PATH variable, and to use this program as the interpeter.
 
 Why would I use `#!/usr/bin/env python3` instead of the more direct `#!/usr/bin/python3`?
 
