@@ -173,6 +173,6 @@ I think it helps to write down some of the vocabulary that we used in this docum
 | Unicode | A character encoding standard created in the early 1990s, that has over 1 million code points, and supports many world languages |
 | Video terminal | A device consisting of a keyboard and a screen that allows input and output with a computer, popular in the 1960s, 1970s, and 1980s |
 
-I really enjoyed learning about video terminals while writing this document. It really helps to explain what a terminal emulator is.
+I enjoyed learning about video terminals while writing this document. It helps to explain what a terminal emulator is.
 
-I also really enjoyed learning about escape sequences, and the ANSI color codes in particular.
+I also enjoyed learning about escape sequences, and the ANSI color codes in particular.
