@@ -122,9 +122,9 @@ If it's not installed on the system, then it won't be found.
 
 But if it is installed on the system, then we have a higher chance of finding it, if we use the `#!/usr/bin/env python3` shell directive.
 
-## How do I run colorprint.py using the shell?
+## How do I run colorprint.py directly?
 
-We can run the program colorprint.py, directly, using the shell, by setting it executable, and then using the `./` syntax for running a script.
+We can run the program colorprint.py, directly, by making it executable, and then using the `./` syntax for running a script.
 
     % cd ~/Github/colorprint
     % chmod +x colorprint.py
