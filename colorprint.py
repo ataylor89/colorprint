@@ -10,25 +10,18 @@ def main():
         description='Prints beautiful text messages to stdout',
         epilog='Software by Andrew Taylor')
     parser.add_argument('message')
-    parser.add_argument('-fg', '--foreground-color')
-    parser.add_argument('-bg', '--background-color')
-    parser.add_argument('-b', '--bold', action='store_true')
-    parser.add_argument('-u', '--underline', action='store_true')
-    parser.add_argument('-d', '--use-defaults', action='store_true')
+    parser.add_argument('-fg', '--foreground-color', default=defaults['foreground_color'])
+    parser.add_argument('-bg', '--background-color', default=defaults['background_color'])
+    parser.add_argument('-b', '--bold', action='store_true', default=defaults['bold'])
+    parser.add_argument('-u', '--underline', action='store_true', default=defaults['underline'])
     args = parser.parse_args()
 
     message = args.message.replace('\\n', '\n')
 
-    if args.use_defaults:
-        foreground_color = defaults['foreground_color']
-        background_color = defaults['background_color']
-        bold = defaults['bold']
-        underline = defaults['underline']
-    else:
-        foreground_color = args.foreground_color
-        background_color = args.background_color
-        bold = args.bold
-        underline = args.underline
+    foreground_color = args.foreground_color
+    background_color = args.background_color
+    bold = args.bold
+    underline = args.underline
 
     formatted_message = ''
 
